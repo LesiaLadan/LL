@@ -45,9 +45,9 @@ print()
 
 print('4. Розрахунок знижки')
 print()
-price = float(input("To calculate the total with discount, enter the original price: "))
+price = float(input('To calculate the total with discount, enter the original price: '))
 print()
-discount = float(input("Enter the discount percentage (%): " ))
+discount = float(input('Enter the discount percentage (%): ' ))
 print()
 
 final_price = price - price * discount / 100

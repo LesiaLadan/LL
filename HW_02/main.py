@@ -91,5 +91,3 @@ c, d = divmod(left,10)
 digits = [a, b, c, d]
 for digit in digits:
     print(digit)
-
-

@@ -10,3 +10,12 @@ if not lst:
 else:
     result = sum([x for i, x in enumerate(lst) if i % 2 == 0]) * lst[-1]
     print (result)
+
+# Alternative solution
+
+# if not lst:
+#     result = 0
+#     print (result) 
+# else:
+#     result = sum([x for x in lst[::2]]) * lst[-1]
+#     print (result)

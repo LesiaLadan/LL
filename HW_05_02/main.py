@@ -21,9 +21,6 @@ while work:
             result = x / y
         else:
             result = 'Error! Division by zero is not allowed.'
-    else:
-        result = 'Error! Unknown operator.'
-
     print("Result:", result)
     
     cont = input("Do you want to continue? (yes/no): ").lower().strip()

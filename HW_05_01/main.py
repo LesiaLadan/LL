@@ -20,13 +20,11 @@ import keyword
 
 x = input('Enter a string to check if it valid for variable name: \n')
 
-invalid_underscores = x.startswith("__") and x.endswith("__")
-
 var_ok = (
     x 
     and not x[0].isdigit()
     and x not in keyword.kwlist
-    and not invalid_underscores
+    and not (x.count('_') == len(x) and len(x) > 1)
     and " " not in x
     and all(c.islower() or c.isdigit() or c == "_" for c in x)
 )

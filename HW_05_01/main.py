@@ -23,7 +23,7 @@ x = input('Enter a string to check if it valid for variable name: \n')
 invalid_underscores = x.startswith("__") and x.endswith("__")
 
 var_ok = (
-    x
+    x 
     and not x[0].isdigit()
     and x not in keyword.kwlist
     and not invalid_underscores

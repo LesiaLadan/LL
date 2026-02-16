@@ -20,7 +20,7 @@ def delete_html_tags(html):
     return '\n'.join(text_lines)
 
 def process_file(input_filename, output_filename = "cleaned.txt"):
-    # це спитала у gpt, бо не знала як зробити, щоб у вас і в мене знаходилвся файл драфта, і щоб очищений записувався саме в папку з поточною домашкою, а не в кореневий каталог
+    # це спитала у gpt, бо не знала як зробити, щоб у вас і в мене знаходився файл драфта, і щоб очищений записувався саме в папку з поточною домашкою, а не в кореневий каталог
     base_path = os.path.dirname(__file__)
     input_path = os.path.join(base_path, input_filename)
     output_path = os.path.join(base_path, output_filename)

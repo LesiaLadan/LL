@@ -19,6 +19,8 @@ class Student(Human):
     def __str__(self):
         return f"{self.first_name} {self.last_name}\nGender: {self.gender}\nAge: {self.age}\nRecord book: {self.record_book}"
 
+class GroupLimitError(Exception):
+    pass
 
 class Group:
 
@@ -28,7 +30,7 @@ class Group:
 
     def add_student(self, student):
         if len(self.group) >= 10:
-            raise ValueError(f"Group size limit exceeded – cannot add student {student.first_name} {student.last_name}")
+            raise GroupLimitError(f"Group size limit exceeded – cannot add student {student.first_name} {student.last_name}")
         else:
             self.group.add(student)
             
@@ -70,7 +72,7 @@ for every in students:
     try:
         gr.add_student(every)
         print(f"Number of students: {len(gr.group)}")
-    except ValueError as e:
+    except GroupLimitError as e:
         print(e)
 
 assert str(gr.find_student('Jobs')) == str(st1), 'Test1'

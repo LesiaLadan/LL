@@ -8,7 +8,7 @@ class Student(Human):
         self.record_book = record_book
 
     def __eq__(self, other):
-        return isinstance(other, Student) and str(self) == str(other)
+        return str(self) == str(other)
 
     def __hash__(self):
         return hash(str(self))

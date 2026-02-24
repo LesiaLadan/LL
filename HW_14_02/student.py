@@ -8,6 +8,8 @@ class Student(Human):
         self.record_book = record_book
 
     def __eq__(self, other):
+        if not isinstance(other, Student):
+            return NotImplemented
         return str(self) == str(other)
 
     def __hash__(self):
